@@ -1,8 +1,11 @@
 require "rails_helper"
 
-describe ToDoList do
+describe ToDoList, type: :model do
   describe "Validations" do
-    it {should validate_presence_of :name}
-    it {should validate_presence_of :day}
+    context "validates presence attriubutes" do
+      it {should validate_presence_of :users_id}
+      it {should validate_presence_of :day}
+      it {should validate_presence_of :task}
+    end
   end
 end

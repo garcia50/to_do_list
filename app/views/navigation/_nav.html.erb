@@ -1,0 +1,8 @@
+<div class="nav">
+  <% if current_user %>
+    <%= link_to "Home", dashboard_path(current_user) %>
+    <%= link_to "Logout", logout_path, method: :delete, class: 'nav-link'  %>
+  <% end %>
+</div>
+
+

@@ -8,7 +8,16 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <% unless controller_name == "welcome" %>
+    <%= render "navigation/nav" %>
+  <% end %>
+  
   <body>
+    <div class="flash">
+      <% flash.each do |type, message| %>
+        <%= content_tag :div, message.html_safe, class: type %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

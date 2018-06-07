@@ -1,0 +1,12 @@
+<div class="container">
+  <% if current_user %>
+  <div class="text-center">
+    <h2>Modify Account</h2>
+  </div>
+
+    <%= render partial: "form" %>
+  <% else %>
+    <%= render file: 'public/404' %>
+  <% end %>
+</div>
+

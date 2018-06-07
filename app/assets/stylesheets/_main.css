@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+body {
+  .flash {  
+    margin-right: 50px;
+  }
+}
+
+.welcome{
+  padding-left: 220px;
+}
+
+.links {
+  padding-left: 90px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: #606060;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  margin: 20px; 
+  text-shadow: 2px 2px grey;
+}
+
+.nav h1 {
+  display: flex;
+  padding-right: 550px;
+}
+
+.todo {
+  
+}

@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <h2><%= link_to "#{current_user.name}'s To Do List", users_path %></h2>
+  <h2><%= link_to "#{current_user.name}'s To Do List", user_to_do_lists_path(current_user) %></h2>
   <p>Name: <%= current_user.name %></p>
   <p>Email: <%= current_user.email %></p>
 

@@ -1,5 +1,5 @@
 class ToDoList < ApplicationRecord
-  validates :users_id, :day, :task, presence: true, uniqueness: true
+  validates :user_id, :day, :task, presence: true
 
   belongs_to :user
 end 

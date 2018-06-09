@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'welcome#index'
 
-  resources :users, shallow: :true
+  resources :users, except: [:index] do 
+    resources :to_do_lists, shallow: :true
+  end
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

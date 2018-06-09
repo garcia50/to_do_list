@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
     end
 
     create_table :to_do_lists do |t|
-      t.belongs_to :users, index: true
       t.string :day
       t.string :task
       t.timestamps

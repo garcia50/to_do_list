@@ -1,27 +1,18 @@
 html, body {
   height: 100%;
+  width: 100%;
+  margin:auto;
   font-family: 'Roboto Condensed', sans-serif;
+
 }
 
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0;
 }
 
-body {
-  .flash {  
-    margin-right: 50px;
-  }
-}
-
-.welcome{
-  padding-left: 220px;
-}
-
-.links {
-  padding-left: 90px;
+.flash {  
+  margin-right: 50px;
 }
 
 .nav {
@@ -47,6 +38,72 @@ body {
   padding-right: 550px;
 }
 
-.todo {
-  
+.welcome{
+  display: flex;
+  align-items: center;
+  padding-left: 220px;
+  overflow: hidden;
 }
+
+.links {
+  padding-left: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+}
+
+.user {
+  display: inline;
+  padding-top: 21%;
+}
+
+.usertodo {
+  padding-right: 120px;
+}
+
+.todo {
+  /*display: flex;*/
+  padding-right: auto;
+
+}
+
+.new_list {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  top: 75px;
+}
+
+.todos {
+  overflow: visible;
+  padding-top: 220px;
+  padding-bottom: 300px;
+}
+
+
+
+
+
+
+
+
+
+

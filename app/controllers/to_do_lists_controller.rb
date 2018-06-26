@@ -1,5 +1,5 @@
 class ToDoListsController < ApplicationController
-  before_action :check_user, only: [:new, :index]
+  before_action :check_user
 
   def index
     @to_do_lists = current_user.to_do_lists 
@@ -12,6 +12,7 @@ class ToDoListsController < ApplicationController
   def create
     @to_do_list = current_user.to_do_lists.new(todo_params)
     if @to_do_list.save
+      UserNotifier.send_tasks_email(current_user).deliver_now
       flash[:success] = "Lets get it done!"
       redirect_to user_to_do_lists_path(current_user)
     else
@@ -28,6 +29,12 @@ class ToDoListsController < ApplicationController
     @to_do_list = ToDoList.find(params[:id])
     @to_do_list.destroy
 
+    redirect_to user_to_do_lists_path(current_user)
+  end
+
+  def complete
+    ToDoList.update_all(["status=?", true])#, id: params[:task_ids]
+    params[:task_ids]
     redirect_to user_to_do_lists_path(current_user)
   end
 

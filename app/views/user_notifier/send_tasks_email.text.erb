@@ -1,0 +1,9 @@
+<%= @user.name %>, here are your new tasks!
+===============================================
+ 
+Time to get to work and have a great day!
+
+<% @user.to_do_lists.each do |list| %>
+  Day: <%= list.day %>
+  Task: <%= list.task %>
+<% end %>

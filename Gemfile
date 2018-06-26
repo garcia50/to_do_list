@@ -41,6 +41,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'pry'
   gem 'factory_bot_rails', '~> 4.0'
+  gem 'sendgrid-ruby'
 end
 
 group :development do

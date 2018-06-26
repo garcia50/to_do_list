@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @user.name %>, here are your new tasks!</h1>
+    <p>Time to get to work and have a great day!</p>
+    <p>
+      <% @user.to_do_lists.each do |list| %>
+      <br>
+      Day: <%= list.day %>
+      <br>
+      Task: <%= list.task %>
+      <br>
+    <% end %>
+    </p>
+  </body>
+</html>

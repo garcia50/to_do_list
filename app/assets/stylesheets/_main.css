@@ -77,7 +77,7 @@ body {
 }
 
 .todo {
-  /*display: flex;*/
+  display: flex;
   padding-right: auto;
 
 }

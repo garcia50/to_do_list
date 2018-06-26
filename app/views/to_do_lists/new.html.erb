@@ -1,10 +1,12 @@
-<%= form_for [:user, @to_do_list] do |f| %>
-  <%= f.label :day %>
-  <%= f.text_field :day %>
-  <br>
-  <br>
-  <%= f.label :task %>
-  <%= f.text_area :task %>
+<div class="login">
+  <%= form_for [:user, @to_do_list] do |f| %>
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+    <br>
+    <br>
+    <%= f.label :task %>
+    <%= f.text_area :task %>
 
-  <%= f.submit "Create" %>
-<% end %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>

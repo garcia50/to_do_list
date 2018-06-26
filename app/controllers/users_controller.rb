@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_user, only: [:show]
+  before_action :check_user, except: [:new, :create]
 
   def show;end
 

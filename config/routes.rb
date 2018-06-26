@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :users, except: [:index] do 
-    resources :to_do_lists, shallow: :true
+    resources :to_do_lists, shallow: :true do 
+      collection do
+        put 'complete'
+      end
+    end
   end
 
   get '/login', to: 'sessions#new'
@@ -11,5 +15,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/dashboard', to: 'users#show'
+
   
 end

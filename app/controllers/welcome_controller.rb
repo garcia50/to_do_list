@@ -1,3 +1,9 @@
 class WelcomeController < ApplicationController
-  def index; end
+  def index
+    if current_user
+     redirect_to dashboard_path
+    else
+      render :index
+    end
+  end
 end

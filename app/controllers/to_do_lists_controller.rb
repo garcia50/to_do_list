@@ -33,8 +33,7 @@ class ToDoListsController < ApplicationController
   end
 
   def complete
-    ToDoList.update_all(["status=?", true])#, id: params[:task_ids]
-    params[:task_ids]
+    ToDoList.where(id: params[:task_ids]).update_all(status: true)
     redirect_to user_to_do_lists_path(current_user)
   end
 

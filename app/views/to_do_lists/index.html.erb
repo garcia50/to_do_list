@@ -13,7 +13,7 @@
   <div class="todos">
     <%= form_tag complete_user_to_do_lists_path, method: :put do %>
       <% @to_do_lists.each do |task| %>
-        <% if task.status != true %>
+        <% if task.status != true %> 
           <%= check_box_tag "task_ids[]", task.id %>
           Day: <%= task.day %>
           <br>
@@ -34,7 +34,7 @@
   <div class="todos">
     <h2>Completed Tasks</h2>
     <% @to_do_lists.each do |task| %>
-      <% if task.status == true %>
+      <% if task.status %>
         Day: <%= task.day %>
         <br>
         Task: <%= task.task %>

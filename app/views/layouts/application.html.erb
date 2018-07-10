@@ -20,6 +20,15 @@
         <%= content_tag :div, message.html_safe, class: type %>
       <% end %>
     </div>
+
     <%= yield %>
+    
+    <footer>
+      <div class="footer">
+        <p>Copyright &copy; ToDoList 2018</p>
+      </div>
+    </footer>
+
   </body>
+
 </html>

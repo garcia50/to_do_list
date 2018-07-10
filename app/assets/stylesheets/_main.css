@@ -9,6 +9,7 @@ html, body {
 body {
   display: flex;
   justify-content: center;
+  text-align: -webkit-center;
 }
 
 .flash {  
@@ -99,7 +100,6 @@ body {
 }
 
 .todo {
-  /*display: flex;*/
   padding-right: auto;
 
 }
@@ -120,9 +120,15 @@ body {
   padding-bottom: 0px;
 }
 
-
-
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: none;
+  color: black;
+  text-align: center;
+}
 
 
 

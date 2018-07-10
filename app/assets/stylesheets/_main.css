@@ -39,18 +39,40 @@ body {
 }
 
 .welcome{
+  font-family: sans-serif;
+  font-size: 50px;
   display: flex;
   align-items: center;
   padding-left: 220px;
-  overflow: hidden;
+  padding-right: 90px;
+  position: static;
 }
 
 .links {
-  padding-left: 90px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+}
+
+.linkit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linkit .checkmark {
+  visibility: hidden;
+  content: url(green_check.png);
+  width: 1px;
+  height: 1px;
+}
+
+.linkit:hover .checkmark {
+  visibility: visible;
+  opacity: 1;
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
 }
 
 .login-form {

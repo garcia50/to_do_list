@@ -13,7 +13,12 @@ body {
 }
 
 .flash {  
-  margin-right: 50px;
+  position: fixed;
+  left: 0;
+  top: 150px;
+  width: 100%;
+  color: #42e5f4;
+  text-align: center;
 }
 
 .nav {

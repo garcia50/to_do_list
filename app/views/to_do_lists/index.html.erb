@@ -1,4 +1,4 @@
-<div class="usertodo">
+<div class="todo-list">
   <div class="todo">  
     <div class="new_list">
       <h1><%= "#{current_user.name}'s To Do List" %></h1>
@@ -10,11 +10,30 @@
     </div>
   </div>
 
-  <div class="todos">
-    <%= form_tag complete_user_to_do_lists_path, method: :put do %>
+  <% if !@to_do_lists.empty?  %>
+    <div class="todos">
+      <%= form_tag complete_user_to_do_lists_path, method: :put do %>
+        <% @to_do_lists.each do |task| %>
+          <% if task.status != true %> 
+            <%= check_box_tag "task_ids[]", task.id %>
+            Day: <%= task.day %>
+            <br>
+            Task: <%= task.task %>
+            <br>
+            <%= link_to "delete", to_do_list_path(task.id), method: "delete", data: {confirm: "Are you sure you want to delete the task?"} %>
+            <br>
+            <br>
+          <% end %>
+        <% end %>
+        <%= submit_tag "Mark as Complete" %>
+        <br>
+        <br>
+        <br>
+      <% end %>
+
+      <h2>Completed Tasks</h2>
       <% @to_do_lists.each do |task| %>
-        <% if task.status != true %> 
-          <%= check_box_tag "task_ids[]", task.id %>
+        <% if task.status %>
           Day: <%= task.day %>
           <br>
           Task: <%= task.task %>
@@ -24,25 +43,6 @@
           <br>
         <% end %>
       <% end %>
-      <%= submit_tag "Mark as Complete" %>
-      <br>
-      <br>
-      <br>
-    <% end %>
-  </div>
-
-  <div class="todos">
-    <h2>Completed Tasks</h2>
-    <% @to_do_lists.each do |task| %>
-      <% if task.status %>
-        Day: <%= task.day %>
-        <br>
-        Task: <%= task.task %>
-        <br>
-        <%= link_to "delete", to_do_list_path(task.id), method: "delete", data: {confirm: "Are you sure you want to delete the task?"} %>
-        <br>
-        <br>
-      <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

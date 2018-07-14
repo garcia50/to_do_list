@@ -1,9 +1,8 @@
-<div class="login">
+<div class="edit-new-account">
   <div class="login">
     <h2>Create Account</h2>
+    <br>
+    <%= render partial: "form" %>
+    <%= link_to "back", dashboard_path %>
   </div>
-
-  <%= render partial: "form" %>
-  <%= link_to "back", dashboard_path %>
-
 </div>

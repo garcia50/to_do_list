@@ -1,4 +1,4 @@
-<div class="login">
+<div class="create-task">
   <%= form_for [:user, @to_do_list] do |f| %>
     <%= f.label :day %>
     <%= f.text_field :day %>
@@ -6,7 +6,8 @@
     <br>
     <%= f.label :task %>
     <%= f.text_area :task %>
-
-    <%= f.submit "Create" %>
+    <br>
+    <br>
+    <%= f.submit "Create Task" %>
   <% end %>
 </div>

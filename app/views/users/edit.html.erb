@@ -1,12 +1,13 @@
-<div class="login">
+<div class="edit-new-account">
   <% if current_user %>
-  <div class="text-center">
-    <h2>Modify Account</h2>
-  </div>
-
-    <%= render partial: "form" %>
+    <div class="text-center">
+      <h2>Modify Account</h2>
+      <br>
+      <%= render partial: "form" %>
+    </div>
   <% else %>
     <%= render file: 'public/404' %>
   <% end %>
+  <%= link_to "cancel", dashboard_path %>
 </div>
 

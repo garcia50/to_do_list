@@ -8,12 +8,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-  </head>
-
+  
   <% unless controller_name == "welcome" %>
     <%= render "navigation/nav" %>
   <% end %>
-  
+
+  </head>
+
   <body>
     <div class="flash">
       <% flash.each do |type, message| %>
@@ -28,7 +29,6 @@
         <p>Copyright &copy; ToDoList 2018</p>
       </div>
     </footer>
-
   </body>
 
 </html>

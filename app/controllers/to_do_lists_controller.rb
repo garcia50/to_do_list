@@ -16,7 +16,7 @@ class ToDoListsController < ApplicationController
       flash[:success] = "Lets get it done!"
       redirect_to user_to_do_lists_path(current_user)
     else
-      flash[:error] = "Da HAIL!? Did not save"
+      flash[:error] = "OOPS! Did not save"
       render :new
     end
   end

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash.now[:notice] = "Logged in as #{current_user.email}"
       redirect_to '/dashboard'
     else
-      flash.now[:notice] = "email and/or password may not exist or match in our database"
+      flash.now[:notice] = "email and/or password may not match in our database"
       render :new
     end
   end

@@ -10,12 +10,16 @@ body {
   height: 100%;
 }
 
+.create-task {
+  margin-top: 250px;
+}
+
 .flash {  
   position: absolute;
-  top: 250px;
+  top: 50px;
   width: 100%;
   color: #42e5f4;
-  right: 230px;
+  /*right: 230px;*/
 }
 
 .nav {

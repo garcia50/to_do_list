@@ -18,7 +18,7 @@
   <body>
     <div class="flash">
       <% flash.each do |type, message| %>
-        <%= content_tag :div, message.html_safe, class: type %>
+        <%= format_error_messages(type, message).html_safe %>
       <% end %>
     </div>
 
@@ -30,5 +30,4 @@
       </div>
     </footer>
   </body>
-
 </html>

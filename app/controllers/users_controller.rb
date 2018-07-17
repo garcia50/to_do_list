@@ -11,10 +11,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash.now[:notice] = "Logged in as #{current_user.email}."
+      flash[:notice] = "Logged in as #{current_user.email}"
       redirect_to '/dashboard'
     else
-      flash.now[:notice] = "that email is already taken, try another one"
+      flash.now[:notice] = @user.errors.full_messages
       render :new
     end
   end
@@ -27,10 +27,10 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(user_params)
     if @user.save
-      flash.now[:notice] = "#{@user.name} was updated"
+      flash[:notice] = "#{@user.name} was updated"
       redirect_to dashboard_path
     else
-      flash.now[:notice] = "Something went wrong, please try again."
+      flash.now[:notice] = @user.errors.full_messages
       render :edit
     end
   end
@@ -45,6 +45,6 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end

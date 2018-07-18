@@ -10,16 +10,11 @@ body {
   height: 100%;
 }
 
-.create-task {
-  margin-top: 250px;
-}
-
 .flash {  
   position: absolute;
   top: 50px;
   width: 100%;
   color: #42e5f4;
-  /*right: 230px;*/
 }
 
 .nav {
@@ -110,15 +105,10 @@ body {
 }
 
 .todo-list {
+  min-height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 220px;
-}
-
-.todo {
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
+  align-items: center;
 }
 
 .new_list {
@@ -133,38 +123,36 @@ body {
   padding-left: 15px;
 }
 
-.todos {
+.create-task {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 19%;
+}
+
+.todos {
   border: 2px solid red;
   border-radius: 5px;
   padding: 20px;
+  margin-top: 17%;
 }
 
 footer {
-  /*position: initial;*/
   bottom: 0;
   width: 100%;
   padding-top: 10px;
 }
 
+@media screen and (min-height: 1900px) {
 
+  .todos {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 11%;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

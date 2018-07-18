@@ -1,13 +1,11 @@
 <div class="todo-list">
-  <div class="todo">  
-    <div class="new_list">
-      <h1><%= "#{current_user.name}'s To Do List" %></h1>
-      <% if @to_do_lists.empty?  %>
-        <h3><%= link_to "create a list", new_user_to_do_list_path(current_user) %></h3>
-      <% else %>
-        <h3><%= link_to "Add a task", new_user_to_do_list_path(current_user) %></h3>
-      <% end %>
-    </div>
+  <div class="new_list">
+    <h1><%= "#{current_user.name}'s To Do List" %></h1>
+    <% if @to_do_lists.empty?  %>
+      <h3><%= link_to "create a list", new_user_to_do_list_path(current_user) %></h3>
+    <% else %>
+      <h3><%= link_to "Add a task", new_user_to_do_list_path(current_user) %></h3>
+    <% end %>
   </div>
 
   <% if !@to_do_lists.empty?  %>

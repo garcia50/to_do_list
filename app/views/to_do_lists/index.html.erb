@@ -23,13 +23,27 @@
             <br>
           <% end %>
         <% end %>
-        <%= submit_tag "Mark as Complete" %>
+        
+        <% count = 1 %>
+        <% @to_do_lists.each do |task| %>
+          <% if task.status != true && count == 1 %>
+            <% count += 1 %> 
+            <%= submit_tag "Mark as Complete" %>
+          <% end %>  
+        <% end %>  
         <br>
         <br>
         <br>
       <% end %>
 
-      <h2>Completed Tasks</h2>
+      <% ct_count = 1 %>
+      <% @to_do_lists.each do |task| %>
+        <% if task.status == true && ct_count == 1 %>
+          <% ct_count += 1 %>       
+          <h2>Completed Tasks</h2>
+        <% end %>
+      <% end %>
+
       <% @to_do_lists.each do |task| %>
         <% if task.status %>
           Day: <%= task.day %>

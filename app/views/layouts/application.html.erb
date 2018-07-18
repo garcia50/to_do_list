@@ -9,10 +9,9 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   
-  <% unless controller_name == "welcome" %>
-    <%= render "navigation/nav" %>
-  <% end %>
-
+    <% unless controller_name == "welcome" %>
+      <%= render "navigation/nav" %>
+    <% end %>
   </head>
 
   <body>

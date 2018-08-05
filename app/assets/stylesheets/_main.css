@@ -137,11 +137,11 @@ body {
   margin-top: 17%;
 }
 
-footer {
-  bottom: 0;
-  width: 100%;
-  padding-top: 10px;
-}
+  footer {
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+  }
 
 @media screen and (min-height: 1900px) {
   .todos {
